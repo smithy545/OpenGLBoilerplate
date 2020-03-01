@@ -6,10 +6,12 @@
 #define WORKER_HUMOID_H
 
 #include <glm/glm.hpp>
+#include <glm/ext.hpp>
+
 #include <utility>
 #include <vector>
 
-#include "Mesh.h"
+#include "MeshObject.h"
 
 
 class Humoid {
@@ -18,10 +20,10 @@ public:
 
     Humoid(glm::vec3 initialPosition);
 
+    std::vector<MeshObject::Ptr> getBodyMeshes();
 private:
     glm::vec3 position;
-    std::vector<glm::vec3> joints;
-    std::vector<std::pair<int, int>> bones;
+    std::vector<MeshObject::Ptr> bodyParts;
 };
 
 

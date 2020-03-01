@@ -3,6 +3,7 @@
 //
 
 #include "Renderer.h"
+#include "Humoid.h"
 
 // Include standard headers
 #include <fstream>
@@ -23,9 +24,9 @@ float Renderer::mouseY = Renderer::HEIGHT / 2;
 
 
 Renderer::Renderer() : mvpUniform(0),
-                        playerCamera(glm::vec3(0, 10, 0)),
-                        shaderProgram(0),
-                        window(nullptr) {}
+                       playerCamera(glm::vec3(0, 5, 0)),
+                       shaderProgram(0),
+                       window(nullptr) {}
 
 int Renderer::init() {
     // Initialise GLFW
@@ -87,7 +88,7 @@ int Renderer::init() {
     // setup floor mesh
     int w = 50;
     int h = 50;
-    cout << "Generating " << 2*w << "x" << 2*h << " floor mesh" << endl;
+    cout << "Generating " << 2 * w << "x" << 2 * h << " floor mesh..." << endl;
 
     int i = 0;
     Mesh::Ptr floorMesh = std::make_shared<Mesh>();
@@ -121,8 +122,8 @@ int Renderer::init() {
         }
     }
     floorMesh->reload();
-
     meshesToRender.push_back(std::make_shared<MeshObject>(floorMesh));
+    cout << "Floor mesh generated." << endl;
 
     return 0;
 }
@@ -134,7 +135,15 @@ void Renderer::cleanup() {
 }
 
 void Renderer::run() {
-    do{
+    cout << "Adding jim..." << endl;
+    // add humoid body mesh
+    Humoid jim(glm::vec3(0, 5, -5));
+    for (auto mesh: jim.getBodyMeshes())
+        meshesToRender.push_back(mesh);
+
+    cout << "Jim added." << endl;
+
+    do {
         // Clear the screen
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

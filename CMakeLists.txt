@@ -32,7 +32,7 @@ add_definitions(
 
 
 # add exec
-add_executable(worker src/main.cpp src/Renderer.cpp src/Renderer.h src/Humoid.cpp src/Humoid.h src/Camera.cpp src/Camera.h src/Mesh.h src/MeshObject.h)
+add_executable(worker src/main.cpp src/Renderer.cpp src/Renderer.h src/Humoid.cpp src/Humoid.h src/Camera.cpp src/Camera.h src/Mesh.h src/MeshObject.h src/MeshUtil.cpp src/MeshUtil.h)
 target_link_libraries(worker
         ${ALL_LIBS}
         )
