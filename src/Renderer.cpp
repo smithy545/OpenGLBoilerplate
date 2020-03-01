@@ -91,32 +91,32 @@ int Renderer::init() {
 
     int i = 0;
     Mesh::Ptr floorMesh = std::make_shared<Mesh>();
-    for(int y = -h; y < h; y++) {
-        for(int x = -w; x < w; x++) {
+    for (int z = -h; z < h; z++) {
+        for (int x = -w; x < w; x++) {
             // top right
             floorMesh->vertices.push_back(x);
-            floorMesh->vertices.push_back(y + 1);
-            floorMesh->vertices.push_back(-5);
+            floorMesh->vertices.push_back(0);
+            floorMesh->vertices.push_back(z + 1);
             // bottom right
             floorMesh->vertices.push_back(x);
-            floorMesh->vertices.push_back(y);
-            floorMesh->vertices.push_back(-5);
+            floorMesh->vertices.push_back(0);
+            floorMesh->vertices.push_back(z);
             // bottom left
             floorMesh->vertices.push_back(x + 1);
-            floorMesh->vertices.push_back(y);
-            floorMesh->vertices.push_back(-5);
+            floorMesh->vertices.push_back(0);
+            floorMesh->vertices.push_back(z);
             // top left
             floorMesh->vertices.push_back(x + 1);
-            floorMesh->vertices.push_back(y + 1);
-            floorMesh->vertices.push_back(-5);
+            floorMesh->vertices.push_back(0);
+            floorMesh->vertices.push_back(z + 1);
 
             // two triangles that make a square at the given tile location
             floorMesh->indices.push_back(i / 2);
-            floorMesh->indices.push_back(i / 2 + 1);
             floorMesh->indices.push_back(i / 2 + 3);
             floorMesh->indices.push_back(i / 2 + 1);
+            floorMesh->indices.push_back(i / 2 + 1);
+            floorMesh->indices.push_back(i / 2 + 3);
             floorMesh->indices.push_back(i / 2 + 2);
-            floorMesh->indices.push_back(i / 2 + 3);
             i += 8;
         }
     }
