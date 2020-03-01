@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/worker.dir/src/BodyModel.cpp.obj"
   "CMakeFiles/worker.dir/src/Camera.cpp.obj"
   "CMakeFiles/worker.dir/src/Humoid.cpp.obj"
   "CMakeFiles/worker.dir/src/Renderer.cpp.obj"

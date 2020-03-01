@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Philip/CLionProjects/worker/src/BodyModel.cpp" "C:/Users/Philip/CLionProjects/worker/cmake-build-debug/CMakeFiles/worker.dir/src/BodyModel.cpp.obj"
   "C:/Users/Philip/CLionProjects/worker/src/Camera.cpp" "C:/Users/Philip/CLionProjects/worker/cmake-build-debug/CMakeFiles/worker.dir/src/Camera.cpp.obj"
   "C:/Users/Philip/CLionProjects/worker/src/Humoid.cpp" "C:/Users/Philip/CLionProjects/worker/cmake-build-debug/CMakeFiles/worker.dir/src/Humoid.cpp.obj"
   "C:/Users/Philip/CLionProjects/worker/src/Renderer.cpp" "C:/Users/Philip/CLionProjects/worker/cmake-build-debug/CMakeFiles/worker.dir/src/Renderer.cpp.obj"

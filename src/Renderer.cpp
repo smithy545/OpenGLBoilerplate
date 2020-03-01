@@ -122,7 +122,7 @@ int Renderer::init() {
     }
     floorMesh->reload();
 
-    meshesToRender.push_back(floorMesh);
+    meshesToRender.push_back(std::make_shared<MeshObject>(floorMesh));
 
     return 0;
 }
@@ -141,21 +141,20 @@ void Renderer::run() {
         // Use our shader
         glUseProgram(shaderProgram);
 
-        // Compute the MVP matrix from keyboard and mouse input
-        //computeMatricesFromInputs();
+        // 45 degree field-of-view with 4/3 aspect ratio and 0.1/100 z-cutoff
         float FoV = 45.0f;
-        playerCamera.rotate(0.01);
         glm::mat4 ProjectionMatrix = glm::perspective(glm::radians(FoV), 4.0f / 3.0f, 0.1f, 100.0f);
         glm::mat4 ViewMatrix = playerCamera.getViewMatrix();
-        glm::mat4 ModelMatrix = glm::mat4(1.0);
-        glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
-
-        // Send our transformation to the currently bound shader,
-        // in the "MVP" uniform
-        glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, &MVP[0][0]);
+        glm::mat4 PV = ProjectionMatrix * ViewMatrix;
 
         // render meshes
-        for(const auto& mesh: meshesToRender) {
+        for (const auto &meshObject: meshesToRender) {
+            // set mvp
+            glm::mat4 MVP = PV * meshObject->model;
+            glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, &MVP[0][0]);
+
+            // render mesh
+            Mesh::Ptr mesh = meshObject->mesh;
             glBindVertexArray(mesh->vertexArrayId);
             glDrawElements(GL_TRIANGLES, mesh->indices.size(), GL_UNSIGNED_INT, nullptr);
         }

@@ -1128,15 +1128,25 @@ detail/setup.hpp
 detail/func_vector_relational.inl
 ../external/glm/glm/detail/func_vector_relational.inl
 
-C:/Users/Philip/CLionProjects/worker/src/BodyModel.h
-Mesh.h
-C:/Users/Philip/CLionProjects/worker/src/Mesh.h
-
 C:/Users/Philip/CLionProjects/worker/src/Camera.h
 glm/glm.hpp
 -
 glm/gtc/matrix_transform.hpp
 -
+
+C:/Users/Philip/CLionProjects/worker/src/Humoid.cpp
+Humoid.h
+C:/Users/Philip/CLionProjects/worker/src/Humoid.h
+
+C:/Users/Philip/CLionProjects/worker/src/Humoid.h
+glm/glm.hpp
+-
+utility
+-
+vector
+-
+Mesh.h
+C:/Users/Philip/CLionProjects/worker/src/Mesh.h
 
 C:/Users/Philip/CLionProjects/worker/src/Mesh.h
 GL/glew.h
@@ -1147,6 +1157,16 @@ memory
 -
 vector
 -
+
+C:/Users/Philip/CLionProjects/worker/src/MeshObject.h
+glm/glm.hpp
+-
+memory
+-
+utility
+-
+Mesh.h
+C:/Users/Philip/CLionProjects/worker/src/Mesh.h
 
 C:/Users/Philip/CLionProjects/worker/src/Renderer.cpp
 Renderer.h
@@ -1167,10 +1187,10 @@ string
 -
 vector
 -
-BodyModel.h
-C:/Users/Philip/CLionProjects/worker/src/BodyModel.h
 Camera.h
 C:/Users/Philip/CLionProjects/worker/src/Camera.h
 Mesh.h
 C:/Users/Philip/CLionProjects/worker/src/Mesh.h
+MeshObject.h
+C:/Users/Philip/CLionProjects/worker/src/MeshObject.h
 

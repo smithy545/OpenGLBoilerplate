@@ -496,33 +496,6 @@ windows\fast:
 	$(MAKE) -f external\glfw-3.1.2\tests\CMakeFiles\windows.dir\build.make /nologo -$(MAKEFLAGS) external\glfw-3.1.2\tests\CMakeFiles\windows.dir\build
 .PHONY : windows\fast
 
-src\BodyModel.obj: src\BodyModel.cpp.obj
-
-.PHONY : src\BodyModel.obj
-
-# target to build an object file
-src\BodyModel.cpp.obj:
-	$(MAKE) -f CMakeFiles\worker.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\worker.dir\src\BodyModel.cpp.obj
-.PHONY : src\BodyModel.cpp.obj
-
-src\BodyModel.i: src\BodyModel.cpp.i
-
-.PHONY : src\BodyModel.i
-
-# target to preprocess a source file
-src\BodyModel.cpp.i:
-	$(MAKE) -f CMakeFiles\worker.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\worker.dir\src\BodyModel.cpp.i
-.PHONY : src\BodyModel.cpp.i
-
-src\BodyModel.s: src\BodyModel.cpp.s
-
-.PHONY : src\BodyModel.s
-
-# target to generate assembly for a file
-src\BodyModel.cpp.s:
-	$(MAKE) -f CMakeFiles\worker.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\worker.dir\src\BodyModel.cpp.s
-.PHONY : src\BodyModel.cpp.s
-
 src\Camera.obj: src\Camera.cpp.obj
 
 .PHONY : src\Camera.obj
@@ -669,9 +642,6 @@ help:
 	@echo ... threads
 	@echo ... title
 	@echo ... windows
-	@echo ... src/BodyModel.obj
-	@echo ... src/BodyModel.i
-	@echo ... src/BodyModel.s
 	@echo ... src/Camera.obj
 	@echo ... src/Camera.i
 	@echo ... src/Camera.s

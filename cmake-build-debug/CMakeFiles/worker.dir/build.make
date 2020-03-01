@@ -134,32 +134,12 @@ CMakeFiles\worker.dir\src\Camera.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\worker.dir\src\Camera.cpp.s /c C:\Users\Philip\CLionProjects\worker\src\Camera.cpp
 <<
 
-CMakeFiles\worker.dir\src\BodyModel.cpp.obj: CMakeFiles\worker.dir\flags.make
-CMakeFiles\worker.dir\src\BodyModel.cpp.obj: ..\src\BodyModel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Philip\CLionProjects\worker\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/worker.dir/src/BodyModel.cpp.obj"
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\worker.dir\src\BodyModel.cpp.obj /FdCMakeFiles\worker.dir\ /FS -c C:\Users\Philip\CLionProjects\worker\src\BodyModel.cpp
-<<
-
-CMakeFiles\worker.dir\src\BodyModel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/worker.dir/src/BodyModel.cpp.i"
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe > CMakeFiles\worker.dir\src\BodyModel.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Philip\CLionProjects\worker\src\BodyModel.cpp
-<<
-
-CMakeFiles\worker.dir\src\BodyModel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/worker.dir/src/BodyModel.cpp.s"
-	C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\worker.dir\src\BodyModel.cpp.s /c C:\Users\Philip\CLionProjects\worker\src\BodyModel.cpp
-<<
-
 # Object files for target worker
 worker_OBJECTS = \
 "CMakeFiles\worker.dir\src\main.cpp.obj" \
 "CMakeFiles\worker.dir\src\Renderer.cpp.obj" \
 "CMakeFiles\worker.dir\src\Humoid.cpp.obj" \
-"CMakeFiles\worker.dir\src\Camera.cpp.obj" \
-"CMakeFiles\worker.dir\src\BodyModel.cpp.obj"
+"CMakeFiles\worker.dir\src\Camera.cpp.obj"
 
 # External object files for target worker
 worker_EXTERNAL_OBJECTS =
@@ -168,12 +148,11 @@ worker.exe: CMakeFiles\worker.dir\src\main.cpp.obj
 worker.exe: CMakeFiles\worker.dir\src\Renderer.cpp.obj
 worker.exe: CMakeFiles\worker.dir\src\Humoid.cpp.obj
 worker.exe: CMakeFiles\worker.dir\src\Camera.cpp.obj
-worker.exe: CMakeFiles\worker.dir\src\BodyModel.cpp.obj
 worker.exe: CMakeFiles\worker.dir\build.make
 worker.exe: external\glfw-3.1.2\src\glfw3.lib
 worker.exe: external\GLEW_1130.lib
 worker.exe: CMakeFiles\worker.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Philip\CLionProjects\worker\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable worker.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Philip\CLionProjects\worker\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable worker.exe"
 	D:\Apps\JetBrains\apps\CLion\ch-0\193.6015.37\bin\cmake\win\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\worker.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100177~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2017\COMMUN~1\VC\Tools\MSVC\1416~1.270\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\worker.dir\objects1.rsp @<<
  /out:worker.exe /implib:worker.lib /pdb:C:\Users\Philip\CLionProjects\worker\cmake-build-debug\worker.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console opengl32.lib glu32.lib external\glfw-3.1.2\src\glfw3.lib external\GLEW_1130.lib opengl32.lib glu32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

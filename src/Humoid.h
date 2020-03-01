@@ -9,11 +9,15 @@
 #include <utility>
 #include <vector>
 
+#include "Mesh.h"
+
 
 class Humoid {
 public:
     Humoid();
-    Humoid(int x, int y, int z);
+
+    Humoid(glm::vec3 initialPosition);
+
 private:
     glm::vec3 position;
     std::vector<glm::vec3> joints;

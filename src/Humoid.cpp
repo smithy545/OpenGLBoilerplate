@@ -4,6 +4,6 @@
 
 #include "Humoid.h"
 
-Humoid::Humoid() : Humoid(0, 0, 0) {}
+Humoid::Humoid() : Humoid(glm::vec3(0, 0, 0)) {}
 
-Humoid::Humoid(int x, int y, int z) : position(x, y, z) {}
+Humoid::Humoid(glm::vec3 initialPosition) : position(initialPosition) {}

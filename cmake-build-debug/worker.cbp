@@ -1814,12 +1814,6 @@
 		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/tests/windows.c">
 			<Option target="windows"/>
 		</Unit>
-		<Unit filename="C:/Users/Philip/CLionProjects/worker/src/BodyModel.cpp">
-			<Option target="worker"/>
-		</Unit>
-		<Unit filename="C:/Users/Philip/CLionProjects/worker/src/BodyModel.h">
-			<Option target="worker"/>
-		</Unit>
 		<Unit filename="C:/Users/Philip/CLionProjects/worker/src/Camera.cpp">
 			<Option target="worker"/>
 		</Unit>
@@ -1833,6 +1827,9 @@
 			<Option target="worker"/>
 		</Unit>
 		<Unit filename="C:/Users/Philip/CLionProjects/worker/src/Mesh.h">
+			<Option target="worker"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/src/MeshObject.h">
 			<Option target="worker"/>
 		</Unit>
 		<Unit filename="C:/Users/Philip/CLionProjects/worker/src/Renderer.cpp">

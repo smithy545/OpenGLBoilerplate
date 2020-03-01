@@ -14,9 +14,9 @@
 #include <string>
 #include <vector>
 
-#include "BodyModel.h"
 #include "Camera.h"
 #include "Mesh.h"
+#include "MeshObject.h"
 
 
 class Renderer {
@@ -30,7 +30,7 @@ public:
     void run();
     void cleanup();
 private:
-    std::vector<Mesh::Ptr> meshesToRender;
+    std::vector<MeshObject::Ptr> meshesToRender;
     Camera playerCamera;
     GLuint shaderProgram;
     GLuint mvpUniform;
