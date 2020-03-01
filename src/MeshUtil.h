@@ -5,19 +5,20 @@
 #ifndef WORKER_MESHUTIL_H
 #define WORKER_MESHUTIL_H
 
+#include <glm/glm.hpp>
 
 #include "Mesh.h"
 
 
 class MeshUtil {
 public:
+    static const int MAX_HORIZONTAL_RINGS = 100;
+    static const int MAX_VERTICAL_RINGS = 100;
+
     static Mesh::Ptr generateSphereMesh();
 
-    static Mesh::Ptr generateSphereMesh(double radius);
+    static Mesh::Ptr generateSphereMesh(double radius, int horizontalRings, int verticalRings);
 
-    static Mesh::Ptr generateCylinderMesh();
-
-    static Mesh::Ptr generateCylinderMesh(double radius, double length);
 };
 
 

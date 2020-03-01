@@ -12,9 +12,10 @@ Humoid::Humoid() : Humoid(glm::vec3(0, 0, 0)) {}
 Humoid::Humoid(glm::vec3 initialPosition) : position(initialPosition) {
     // head
     glm::mat4 headModel = glm::translate(glm::mat4(1), position);
-    MeshObject::Ptr obj = std::make_shared<MeshObject>(MeshUtil::generateSphereMesh(), headModel);
+    MeshObject::Ptr obj = std::make_shared<MeshObject>(MeshUtil::generateSphereMesh(1, 8, 8), headModel);
     bodyParts.push_back(obj);
 
+    /*
     // arms
     Mesh::Ptr armMesh = MeshUtil::generateCylinderMesh();
 
@@ -32,6 +33,7 @@ Humoid::Humoid(glm::vec3 initialPosition) : position(initialPosition) {
 
     glm::mat4 rightLegModel = glm::translate(glm::mat4(1), initialPosition + glm::vec3(-1, -2, 0));
     bodyParts.push_back(std::make_shared<MeshObject>(legMesh, rightLegModel));
+     */
 }
 
 std::vector<MeshObject::Ptr> Humoid::getBodyMeshes() {
