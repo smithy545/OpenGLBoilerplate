@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="glm"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\external\;CMake Files\external\glfw-3.1.2\;CMake Files\external\glfw-3.1.2\src\;CMake Files\external\glfw-3.1.2\docs\;CMake Files\external\glfw-3.1.2\examples\;CMake Files\external\glfw-3.1.2\tests\;CMake Files\external\glm\;CMake Files\external\glm\glm\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Philip/CLionProjects/worker/cmake-build-debug/external/glm"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\Philip\CLionProjects\worker\cmake-build-debug\external\glm\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Philip\CLionProjects\worker\cmake-build-debug\external\glm\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Philip\CLionProjects\worker\cmake-build-debug\external\glm\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Philip\CLionProjects\worker\cmake-build-debug\external\glm\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/docs/Doxyfile.in">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\docs\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/examples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\examples\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glfw-3.1.2/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glfw-3.1.2\tests\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glm\"/>
+		</Unit>
+		<Unit filename="C:/Users/Philip/CLionProjects/worker/external/glm/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\glm\glm\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
