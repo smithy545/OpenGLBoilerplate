@@ -4,6 +4,7 @@
 
 #include "Renderer.h"
 #include "Humoid.h"
+#include "TerrainMap.h"
 
 // Include standard headers
 #include <fstream>
@@ -24,7 +25,7 @@ float Renderer::mouseY = Renderer::HEIGHT / 2;
 
 
 Renderer::Renderer() : mvpUniform(0),
-                       playerCamera(glm::vec3(0, 50, 0)),
+                       playerCamera(glm::vec3(0, 10, 0)),
                        shaderProgram(0),
                        window(nullptr) {}
 
@@ -85,46 +86,6 @@ int Renderer::init() {
     // Get a handle for our "MVP" uniform
     mvpUniform = glGetUniformLocation(shaderProgram, "MVP");
 
-    // setup floor mesh
-    int w = 50;
-    int h = 50;
-    cout << "Generating " << 2 * w << "x" << 2 * h << " floor mesh..." << endl;
-
-    int i = 0;
-    Mesh::Ptr floorMesh = std::make_shared<Mesh>();
-    for (int z = -h; z < h; z++) {
-        for (int x = -w; x < w; x++) {
-            // top right
-            floorMesh->vertices.push_back(x);
-            floorMesh->vertices.push_back(0);
-            floorMesh->vertices.push_back(z + 1);
-            // bottom right
-            floorMesh->vertices.push_back(x);
-            floorMesh->vertices.push_back(0);
-            floorMesh->vertices.push_back(z);
-            // bottom left
-            floorMesh->vertices.push_back(x + 1);
-            floorMesh->vertices.push_back(0);
-            floorMesh->vertices.push_back(z);
-            // top left
-            floorMesh->vertices.push_back(x + 1);
-            floorMesh->vertices.push_back(0);
-            floorMesh->vertices.push_back(z + 1);
-
-            // two triangles that make a square at the given tile location
-            floorMesh->indices.push_back(i / 2);
-            floorMesh->indices.push_back(i / 2 + 3);
-            floorMesh->indices.push_back(i / 2 + 1);
-            floorMesh->indices.push_back(i / 2 + 1);
-            floorMesh->indices.push_back(i / 2 + 3);
-            floorMesh->indices.push_back(i / 2 + 2);
-            i += 8;
-        }
-    }
-    floorMesh->reload();
-    meshesToRender.push_back(std::make_shared<MeshObject>(floorMesh));
-    cout << "Floor mesh generated." << endl;
-
     return 0;
 }
 
@@ -138,10 +99,16 @@ void Renderer::run() {
 
     cout << "Adding jim..." << endl;
     // add humoid body mesh
-    Humoid jim(glm::vec3(0, 51, -5));
+    Humoid jim(glm::vec3(0, 10, -5));
     for (auto mesh: jim.getBodyMeshes())
         meshesToRender.push_back(mesh);
     cout << "Jim added." << endl;
+
+
+    cout << "Adding terrain" << endl;
+    TerrainMap map(100, 100);
+    meshesToRender.push_back(std::make_shared<MeshObject>(map.getMesh()));
+    cout << "Terrain added" << endl;
 
     do {
         // Clear the screen

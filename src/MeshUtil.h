@@ -12,6 +12,8 @@
 
 class MeshUtil {
 public:
+    static Mesh::Ptr generateCubeMesh(double width, double height, double length);
+
     static Mesh::Ptr generateSphereMesh(double radius, int horizontalSteps, int verticalSteps);
 
     static Mesh::Ptr generateCylinderMesh(double radius, double length, int lengthSteps, int circumferenceSteps);

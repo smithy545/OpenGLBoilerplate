@@ -6,6 +6,97 @@
 
 #include <iostream>
 
+Mesh::Ptr MeshUtil::generateCubeMesh(double width, double height, double length) {
+    Mesh::Ptr mesh = std::make_shared<Mesh>();
+
+    mesh->vertices.push_back(-0.5 * width);
+    mesh->vertices.push_back(-0.5 * height);
+    mesh->vertices.push_back(-0.5 * length);
+
+    mesh->vertices.push_back(-0.5 * width);
+    mesh->vertices.push_back(0.5 * height);
+    mesh->vertices.push_back(-0.5 * length);
+
+    mesh->vertices.push_back(-0.5 * width);
+    mesh->vertices.push_back(-0.5 * height);
+    mesh->vertices.push_back(0.5 * length);
+
+    mesh->vertices.push_back(0.5 * width);
+    mesh->vertices.push_back(-0.5 * height);
+    mesh->vertices.push_back(-0.5 * length);
+
+    mesh->vertices.push_back(-0.5 * width);
+    mesh->vertices.push_back(0.5 * height);
+    mesh->vertices.push_back(0.5 * length);
+
+    mesh->vertices.push_back(0.5 * width);
+    mesh->vertices.push_back(0.5 * height);
+    mesh->vertices.push_back(-0.5 * length);
+
+    mesh->vertices.push_back(0.5 * width);
+    mesh->vertices.push_back(-0.5 * height);
+    mesh->vertices.push_back(0.5 * length);
+
+    mesh->vertices.push_back(0.5 * width);
+    mesh->vertices.push_back(0.5 * height);
+    mesh->vertices.push_back(0.5 * length);
+
+    // face 1
+    mesh->indices.push_back(0);
+    mesh->indices.push_back(1);
+    mesh->indices.push_back(2);
+
+    mesh->indices.push_back(1);
+    mesh->indices.push_back(2);
+    mesh->indices.push_back(3);
+
+    // face 2
+    mesh->indices.push_back(2);
+    mesh->indices.push_back(3);
+    mesh->indices.push_back(4);
+
+    mesh->indices.push_back(3);
+    mesh->indices.push_back(4);
+    mesh->indices.push_back(5);
+
+    // face 3
+    mesh->indices.push_back(4);
+    mesh->indices.push_back(5);
+    mesh->indices.push_back(6);
+
+    mesh->indices.push_back(5);
+    mesh->indices.push_back(6);
+    mesh->indices.push_back(7);
+
+    // face 4
+    mesh->indices.push_back(6);
+    mesh->indices.push_back(7);
+    mesh->indices.push_back(8);
+
+    mesh->indices.push_back(7);
+    mesh->indices.push_back(8);
+    mesh->indices.push_back(9);
+
+    // face 5
+    mesh->indices.push_back(8);
+    mesh->indices.push_back(9);
+    mesh->indices.push_back(10);
+
+    mesh->indices.push_back(9);
+    mesh->indices.push_back(10);
+    mesh->indices.push_back(11);
+
+    // face 6
+    mesh->indices.push_back(10);
+    mesh->indices.push_back(11);
+    mesh->indices.push_back(12);
+
+    mesh->indices.push_back(11);
+    mesh->indices.push_back(12);
+    mesh->indices.push_back(13);
+
+    return mesh;
+}
 
 Mesh::Ptr MeshUtil::generateSphereMesh(double radius, int horizontalSteps, int verticalSteps) {
     Mesh::Ptr mesh = std::make_shared<Mesh>();
