@@ -61,7 +61,7 @@ Mesh::Ptr MeshUtil::generateSphereMesh(double radius, int horizontalRings, int v
             mesh->indices.push_back(index + j);
             mesh->indices.push_back(index + (j + 1) % verticalRings);
 
-            mesh->indices.push_back(index + verticalRings + j + 1);
+            mesh->indices.push_back(index + verticalRings + (j + 1) % verticalRings);
             mesh->indices.push_back(index + verticalRings + j);
             mesh->indices.push_back(index + (j + 1) % verticalRings);
         }
