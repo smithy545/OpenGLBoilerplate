@@ -135,13 +135,14 @@ void Renderer::cleanup() {
 }
 
 void Renderer::run() {
+
     cout << "Adding jim..." << endl;
     // add humoid body mesh
     Humoid jim(glm::vec3(0, 51, -5));
     for (auto mesh: jim.getBodyMeshes())
         meshesToRender.push_back(mesh);
     cout << "Jim added." << endl;
-    float theta = 0.0f;
+
     do {
         // Clear the screen
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -155,23 +156,17 @@ void Renderer::run() {
         glm::mat4 ViewMatrix = playerCamera.getViewMatrix();
         glm::mat4 PV = ProjectionMatrix * ViewMatrix;
 
-
         // render meshes
         for (const auto &meshObject: meshesToRender) {
             // set mvp
             glm::mat4 MVP = PV * meshObject->model;
             glUniformMatrix4fv(mvpUniform, 1, GL_FALSE, &MVP[0][0]);
 
-            meshObject->model = glm::rotate(meshObject->model, 0.01f, glm::vec3(0, 1, 0));
-
             // render mesh
             Mesh::Ptr mesh = meshObject->mesh;
             glBindVertexArray(mesh->vertexArrayId);
             glDrawElements(GL_TRIANGLES, mesh->indices.size(), GL_UNSIGNED_INT, nullptr);
         }
-
-        // rotate
-        theta += 0.0001;
 
         // Swap buffers
         glfwSwapBuffers(window);
